@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.3.255.40792",
+      "templateHash": "12887714807472933062"
+    }
+  },
+  "parameters": {
+    "StorageAccountName": {
+      "type": "string",
+      "defaultValue": "tfredbiceptest2"
+    },
+    "StorageAccountLocation": {
+      "type": "string",
+      "defaultValue": "westeurope"
+    },
+    "StorageAccountKind": {
+      "type": "string",
+      "defaultValue": "StorageV2"
+    },
+    "StorageAccountSKU": {
+      "type": "object",
+      "defaultValue": {
+        "name": "Standard_LRS",
+        "tier": "Standard"
+      }
+    }
+  },
+  "functions": [],
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2021-02-01",
+      "name": "[parameters('StorageAccountName')]",
+      "location": "[parameters('StorageAccountLocation')]",
+      "kind": "[parameters('StorageAccountKind')]",
+      "sku": "[parameters('StorageAccountSKU')]",
+      "properties": {
+        "supportsHttpsTrafficOnly": true
+      }
+    }
+  ]
+}

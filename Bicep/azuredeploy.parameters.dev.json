@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "publisherName": {
+        "value": "Ørsted"
+        },
+        "apimName": {
+        "value": "msoffice365devapiarmdeployed"
+        },
+        "apimBackendName": {
+        "value": "orsted-microapi-poc"
+        },
+        "apimBackendKeyname": {
+        "value": "orsted-microapi-poc-key"
+        },
+        "apiDefinitionName": {
+        "value": "orsted-provisioning-services"
+        },
+        "apiOperationName": {
+        "value": "CreateNewSite"
+        },
+        "apiOperationUrl": {
+        "value": "/CreateNewSite"
+        },
+        "AIName": {
+        "value": "dev"
+        },
+        "apimLocation": {
+        "value": "westeurope"
+        },
+        "resourceTags": {
+            "value": {
+                "Environment": "Dev",
+                "Project": "MicroserviceAPI"
+            }
+        }
+    }
+}
